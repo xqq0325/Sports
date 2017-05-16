@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.xuqianqian.zjgsu.sports.Register">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:id="@+id/name"
+        android:layout_alignParentTop="true"
+        android:hint="请输入您的用户名"
+        android:layout_alignLeft="@+id/pwd_new"
+        android:layout_alignStart="@+id/pwd_new" />
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/pwd_old"
+        android:hint="请输入您的密码"
+        android:layout_below="@+id/name"
+        android:layout_alignRight="@+id/name"
+        android:layout_alignEnd="@+id/name"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignStart="@+id/name" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/pwd_new"
+        android:layout_below="@+id/pwd_old"
+        android:layout_centerHorizontal="true"
+        android:hint="请确认您的密码" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:id="@+id/register_btn_sure"
+        android:textSize="20dp"
+        android:background="#b5b5b5"
+        android:layout_below="@+id/pwd_new"
+        android:layout_alignLeft="@+id/pwd_new"
+        android:layout_alignStart="@+id/pwd_new"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:id="@+id/register_btn_cancel"
+        android:textSize="20dp"
+        android:background="#b5b5b5"
+        android:layout_below="@+id/register_btn_sure"
+        android:layout_alignLeft="@+id/register_btn_sure"
+        android:layout_alignStart="@+id/register_btn_sure"
+        android:layout_marginTop="10dp" />
+
+
+</RelativeLayout>
