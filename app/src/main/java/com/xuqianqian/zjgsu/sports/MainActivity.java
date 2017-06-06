@@ -9,13 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView title,item_map,item_talk,item_find,item_me;
+    private TextView title, item_map, item_talk, item_find, item_me;
     private ViewPager vp;
     private OneFragment oneFragment;
     private TwoFragment twoFragment;
@@ -24,20 +23,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private List<Fragment> mFragmentList = new ArrayList<Fragment>();
     private MainActivity.FragmentAdapter mFragmentAdapter;
 
-    String[] titles = new String[]{"运动","社区","发现","我"};
+    String[] titles = new String[]{"运动", "社区", "发现", "我"};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         initViews();
 
         mFragmentAdapter = new FragmentAdapter(this.getSupportFragmentManager(), mFragmentList);
-        vp.setOffscreenPageLimit(4);//ViewPager的缓存为4帧
+        vp.setOffscreenPageLimit(4);
         vp.setAdapter(mFragmentAdapter);
-        vp.setCurrentItem(0);//初始设置ViewPager选中第一帧
+        vp.setCurrentItem(0);
         item_map.setTextColor(Color.parseColor("#66CDAA"));
 
         vp.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -59,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
+
+
 
     private void initViews() {
         title = (TextView) findViewById(R.id.title);
@@ -102,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
     public class FragmentAdapter extends FragmentPagerAdapter {
 
         List<Fragment> fragmentList = new ArrayList<Fragment>();
@@ -122,6 +123,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
     }
+
+
+
     private void changeTextColor(int position) {
         if (position == 0) {
             item_map.setTextColor(Color.parseColor("#66CDAA"));

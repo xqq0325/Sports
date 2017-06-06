@@ -18,12 +18,8 @@ public class Login extends AppCompatActivity {
         private EditText mPwd;
         private Button mRegisterButton;
         private Button mLoginButton;
-        private CheckBox mRememberCheck;
-
+        private CheckBox mRememberCheck;;
         private SharedPreferences login_sp;
-        private String userNameValue,passwordValue;
-
-
         private TextView mChangepwdText;
         private UserDataManager mUserDataManager;
 
